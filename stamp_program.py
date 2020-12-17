@@ -7,14 +7,16 @@ output result to user
 end
 """
 
+import math
 
 def calculate(sheet):
-    answer = (sheet / 5)
-    rounded = round(answer, 1)
+    answer = sheet / 5
+    rounded = math.ceil(answer)
     print("sheet is: ", sheet) 
-    print("the answer is:", rounded)
+    print("the answer is:", answer)
+    print("rounded is:", rounded)
     print("=====================================")
     return rounded
 
 output = calculate(16)
-print("the return statement is:", output)
+print("the number of stamps needed is:", output)
